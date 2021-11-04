@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Tube Website Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="Lheader">
+           <nav>
+               <div class="left-side">
+                    <img src="/Images/images/menu.png" id="menu">
+                    <img src="/Images/images/logo.png" class="logo">
+               </div>
+               <div class="middle-section">
+                    <div class="input-section">
+                        <input type="text"placeholder="Search">
+                        <img src="/Images/images/search.png">
+                    </div>
+                    <img src="/Images/images/voice-search.png" class="voice-search">
+               </div>
+               <div class="right-side">
+                    <img src="/Images/images/upload.png" class="upload">
+                    <img src="/Images/images/more.png" class="upload">
+                    <img src="/Images/images/notification.png" class="upload">
+                    <img src="/Images/images/Jack.png" id="jack">
+               </div>
+           </nav>
+           <div class="login-content">
+               <div class="login-left-content">
+                  <div class="textbox">
+                      <h1>Join YouTube Community</h1>
+                      <div class="slider">
+                          <div>Today</div>
+                          <div>Create A Channel</div>
+                          <div>Create Content</div>
+                      </div>
+                  </div>
+               </div>
+               <div class="login-right-content">
+                     <div class="login-form">
+                        <div class="image-part">
+                            <img src="/Images/images/logo.png">
+                        </div>
+                         <div class="links">
+                             <span id="LgBtn">Login</span>
+                             <span id="RegBtn">Register</span>
+                         </div>
+                         <form id="Loginform">
+                             <input type="text" placeholder="Username" required>
+                             <input type="password" placeholder="Password" required>
+                             <br>
+                             <button type="submit">Login</button>
+                         </form>
+                         <form id="RegisterForm">
+                            <input type="text" placeholder="Username" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <input type="password" placeholder=" Confrim Password" required>
+                            <br>
+                            <button type="submit">Register</button>
+                        </form>
+                     </div>
+               </div>
+           </div>
+        </section>
+    <script>
+        var Btn = document.getElementById('ToggleBtn()');
+        var element = document.body;
+
+        Btn.onclick = function(){
+            Btn.classList.toggle('move');
+            element.classList.toggle('dark-mode');
+            Cover.classList.toggle('dark-mode');
+        }
+    </script>
+    <script>
+        var user =document.getElementById('jack');
+        var cover = document.getElementById('menu-cover');
+
+        cover.style.top = "-520px";
+
+        user.onclick = function(){
+            if( cover.style.top =="-520px"){
+                cover.style.top = "12%";
+            }
+            else{
+                cover.style.top = "-520px";
+            }
+        }
+    </script>
+    <script>
+        var menu = document.getElementById('menu');
+        var right_side = document.getElementById('right-row');
+        var rightDifRow = document.getElementById('right-dif-row');
+        var mainContent = document.getElementById('main-content');
+        var leftContent = document.getElementById('left-content');
+        var line = document.getElementsByClassName('underline');
+
+        menu.onclick = function(){
+          if(right_side.style.display == "block"){
+              right_side.style.display = "none";
+              mainContent.style.flexBasis = "95%";
+              leftContent.style.flexBasis = "5%";
+              rightDifRow.style.display = "none";
+              line.classList.toggle('disappear');
+
+          }
+          else{
+              right_side.style.display = "block";
+              mainContent.style.flexBasis = "80%";
+              leftContent.style.flexBasis = "20%";
+              rightDifRow.style.display = "block";
+          }
+        }
+    </script>
+    <script>
+        var LgBtn = document.getElementById('LgBtn');
+        var RegBtn = document.getElementById('RegBtn');
+        var Loginform = document.getElementById('Loginform');
+        var RegisterForm = document.getElementById('RegisterForm');
+
+        LgBtn.onclick = function(){
+            Loginform.style.transform = "translateX(0px)";
+            RegisterForm.style.transform = "translateX(0px)";
+        }
+        RegBtn.onclick = function(){
+            Loginform.style.transform = "translateX(300px)";
+            RegisterForm.style.transform = "translateX(300px)";
+        }
+    </script>
+</body>
+</html>
